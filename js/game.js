@@ -24,7 +24,7 @@ class Game {
         this.score = 0;
         this.level = 1;
         this.velocity = 125;
-        this.enemySpeed = 100;
+        this.enemySpeed = 70;
         this.fireballSpeed = 500;
         this.isGameOver = false;
         this.scoreEl = document.getElementById('score');
@@ -128,7 +128,7 @@ class Game {
     }
 
     addEnemy() {
-        if (Math.random() < 0.03 * this.level) {
+        if (Math.random() < 0.02 * this.level) {
             this.enemies.push({
                 pos: [this.canvas.width + this.offset, Math.random() * (this.canvas.height - 50)],
                 sprite: new Sprite('img/enemybig.png', [0, 0], [45, 50], 16, [0, 1, 2, 3, 4, 5, 6, 5, 4, 3, 2, 1, 0])
